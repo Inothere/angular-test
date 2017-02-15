@@ -1,7 +1,11 @@
 require('bootstrap/dist/css/bootstrap.css');
 require('font-awesome/css/font-awesome.css');
-var scotchApp = angular.module('scotchApp', []);
+var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
+scotchApp.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.
+    when('/about', {template: 'about'}).when('/contact', {template: 'contact'});
+}])
 // create the controller and inject Angular's $scope
 scotchApp.controller('mainController', function($scope, $timeout) {
 

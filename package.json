@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node_modules\\.bin\\webpack.cmd && node_modules\\.bin\\webpack-dev-server.cmd"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +18,10 @@
     "file-loader": "^0.10.0",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.4",
+    "html-loader": "^0.4.4",
     "jquery": "^3.1.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }

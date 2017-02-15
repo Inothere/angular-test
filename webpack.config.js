@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(env) {
 	return {
@@ -16,8 +15,8 @@ module.exports = function(env) {
 		module: {
 			loaders: [
 				{test: /\.css$/, loader: 'style-loader!css-loader'},
-				{test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
-      			{test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
+				{test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff&name=fonts/[name].[ext]" },
+      			{test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader?name=fonts/[name].[ext]" }
 			]
 		},
 		plugins: [
@@ -28,8 +27,7 @@ module.exports = function(env) {
 		        jQuery: 'jquery',
 		        $: 'jquery',
 		        jquery: 'jquery'
-		    }),
-		    new ExtractTextPlugin('css/site.css')
+		    })
 		]
 	};
 }

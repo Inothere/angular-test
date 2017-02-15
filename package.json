@@ -1,0 +1,25 @@
+{
+  "name": "angular-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.10.0",
+    "font-awesome": "^4.7.0",
+    "font-awesome-webpack": "0.0.4",
+    "jquery": "^3.1.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1"
+  }
+}

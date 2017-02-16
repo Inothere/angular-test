@@ -12,6 +12,6 @@ scotchApp.controller('mainController', function($scope, $timeout) {
     // create a message to display in our view
     $scope.message = 'Everyone come and see how good I look!';
     $timeout(function(){
-    	var main = $('#main').html();
+    	console.log('3');
     });
 });

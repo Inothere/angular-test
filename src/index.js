@@ -4,7 +4,7 @@ var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
 scotchApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-    when('/about', {template: 'about'}).when('/contact', {template: 'contact'});
+    when('/about', {template: 'about'}).when('/contact', {template: 'contact'}).when('/', {templateUrl: 'templates/home.html'});
 }])
 // create the controller and inject Angular's $scope
 scotchApp.controller('mainController', function($scope, $timeout) {
@@ -13,5 +13,5 @@ scotchApp.controller('mainController', function($scope, $timeout) {
     $scope.message = 'Everyone come and see how good I look!';
     $timeout(function(){
     	var main = $('#main').html();
-    })
+    });
 });

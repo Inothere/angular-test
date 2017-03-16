@@ -1,0 +1,19 @@
+<div>
+    <div class="block" style="margin: 1em auto 0 auto;">
+        <div class="title">集群</div>
+        <div class="content">
+            cluster: {{clustername}}
+        </div>
+    </div>
+    <div class="pointer">
+    </div>
+    <div class="arrow"></div>
+    <div class="sub-macs" style="display: flex; margin: 0 auto 1em auto;">
+        <div style="margin-right: 1em;" ng-repeat="item in subMacs" class="block">
+            <div class="title">{{item.env}}</div>
+            <div class="content" style="border: none">
+                IP: {{item.ip}}
+            </div>
+        </div>
+    </div>
+</div>

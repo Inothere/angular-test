@@ -1,0 +1,42 @@
+.block {
+    height: 100px;
+    width: 200px;
+    border: 1px solid rgb(200, 200, 200);
+    text-align: center;
+}
+
+.title {
+    height: 20%;
+    border-bottom: 1px solid rgb(200,200,200);
+    background-color: darkcyan;
+}
+
+.content {
+    height: 80%;
+    background-color: lightblue;
+}
+
+.sub-macs {
+    padding: 1em;
+    width: fit-content;
+    border: 1px solid rgb(200,200,200);
+    display: flex; 
+    margin: 0 auto 1em auto;
+    flex-wrap: wrap;
+}
+
+.pointer {
+    height: 10em;
+    width: 0.2em;
+    margin: 0 auto 0 auto;
+    background-color: black;
+}
+
+.arrow {
+    margin: 0 auto 0 auto;
+    height: 0;
+    width: 0;
+    border-left: 0.4em transparent solid;
+    border-right: 0.4em transparent solid;
+    border-top: 0.8em black solid;
+}

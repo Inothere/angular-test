@@ -1,6 +1,8 @@
 require('bootstrap/dist/css/bootstrap.css');
 require('font-awesome/css/font-awesome.css');
+
 var scotchApp = angular.module('scotchApp', ['ngRoute']);
+var directive = require('./blockDirective.js')
 
 scotchApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -15,3 +17,8 @@ scotchApp.controller('mainController', function($scope, $timeout) {
     	console.log('3');
     });
 });
+
+scotchApp.directive('blockDirective', function(){
+    return directive;
+})
+

@@ -5,7 +5,7 @@ module.exports = function(env) {
 	return {
 		entry: {
 			main: './src/index.js',
-			common: ['jquery', 'angular', 'bootstrap', 'angular-route']
+			common: ['jquery', 'angular', 'bootstrap', 'angular-route', 'materialize-css']
 		},
 		output: {
 			path: path.resolve(__dirname, 'dist'),

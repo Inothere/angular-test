@@ -1,24 +1,17 @@
 require('bootstrap/dist/css/bootstrap.css');
 require('font-awesome/css/font-awesome.css');
+require('materialize-css/bin/materialize.css');
+var config = require('./config');
 
-var scotchApp = angular.module('scotchApp', ['ngRoute']);
-var directive = require('./blockDirective.js')
-
-scotchApp.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.
-    when('/about', {template: 'about'}).when('/contact', {template: 'contact'}).when('/', {templateUrl: 'templates/home.html'});
-}])
-// create the controller and inject Angular's $scope
+var scotchApp = angular.module('scotchApp', []);
 scotchApp.controller('mainController', function($scope, $timeout) {
-
-    // create a message to display in our view
-    $scope.message = 'Everyone come and see how good I look!';
-    $timeout(function(){
-    	console.log('3');
+    $scope.version = '1.0';
+    $scope.items = config.items;
+    angular.element(document).ready(function () {
+        $('#autocomplete-input').autocomplete({
+			data: $scope.items,
+			limit: 20
+		});
     });
 });
-
-scotchApp.directive('blockDirective', function(){
-    return directive;
-})
 

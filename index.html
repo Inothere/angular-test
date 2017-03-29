@@ -2,42 +2,26 @@
 <!DOCTYPE html>
 <html ng-app="scotchApp">
 <head>
-  <title>Index</title>
-
+    <title>Index</title>
+    <meta charset="utf-8">
     <script type="text/javascript" src="./dist/common.js"></script>
     <script type="text/javascript" src="./dist/main.js"></script>
 </head>
 <body ng-controller="mainController">
-
-    <!-- HEADER AND NAVBAR -->
-    <header>
-        <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">Angular Routing Example</a>
-            </div>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#!"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#!about"><i class="fa fa-shield"></i> About</a></li>
-                <li><a href="#!contact"><i class="fa fa-comment"></i> Contact</a></li>
-            </ul>
+    <nav>
+        <div class="nav-wrapper teal lighten-2 ">
+            <span href="#" class="brand-logo">&nbsp;Minecraft Helper {{ version }}</span>
         </div>
-        </nav>
-    </header>
-
-    <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main">
-      {{ message }}
-      <i class="fa fa-remove"></i>
-      <block-directive></block-directive>
-      <div ng-view></div>
+    </nav>
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input"><i class="fa fa-search"></i> Autocomplete</label>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="text-center">
-        View the tutorial on <a href="http://scotch.io/tutorials/angular-routing-and-templating-tutorial">Scotch.io</a>
-    </footer>
-
 </body>
 </html>

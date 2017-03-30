@@ -4,24 +4,36 @@
 <head>
     <title>Index</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="./dist/favicon.ico">
     <script type="text/javascript" src="./dist/common.js"></script>
     <script type="text/javascript" src="./dist/main.js"></script>
 </head>
 <body ng-controller="mainController">
-    <nav>
-        <div class="nav-wrapper teal lighten-2 ">
-            <span href="#" class="brand-logo">&nbsp;Minecraft Helper {{ version }}</span>
+    <md-toolbar>
+        <div class="md-toolbar-tools md-hue-2">
+            <h2 style="color: white">Minecraft Helper</h2>
         </div>
-    </nav>
-    <div class="row">
-        <div class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <input type="text" id="autocomplete-input" class="autocomplete">
-                    <label for="autocomplete-input"><i class="fa fa-search"></i> Autocomplete</label>
-                </div>
-            </div>
-        </div>
+    </md-toolbar>
+    <div>
+        <md-autocomplete 
+            md-no-cache="true" 
+            md-input-name="selectedItem"
+            md-search-text="itemInfoText"
+            md-items="item in querySearch(itemInfoText)"
+            md-item-text="item.desc"
+            md-floating-label="过滤物品"
+            md-menu-class="autocomplete-custom"
+            md-selected-item="selectedItem">
+            <md-item-template>
+                <span class="item-title">
+                    <md-icon class="{{ item.itemClass }}"></md-icon>
+                    <span>{{ item.zh_name }} ({{ item.id }})</span>
+                </span>
+            </md-item-template>
+            <md-not-found>
+                找不到
+            </md-not-found>
+        </md-autocomplete>
     </div>
 </body>
 </html>

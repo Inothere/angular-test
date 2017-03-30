@@ -5,7 +5,7 @@ module.exports = function(env) {
 	return {
 		entry: {
 			main: './src/index.js',
-			common: ['jquery', 'angular', 'bootstrap', 'angular-route', 'materialize-css']
+			common: ['jquery', 'angular', 'bootstrap', 'angular-route']
 		},
 		output: {
 			path: path.resolve(__dirname, 'dist'),
@@ -15,8 +15,10 @@ module.exports = function(env) {
 		module: {
 			loaders: [
 				{test: /\.css$/, loader: 'style-loader!css-loader'},
-				{test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff&name=fonts/[name].[ext]" },
-      			{test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, exclude:/.html$/, loader: "file-loader?name=fonts/[name].[ext]" },
+				//{test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff&name=fonts/[name].[ext]" },
+      			{test: /favicon.ico$/, loader: "file-loader?name=/[name].[ext]"},
+				{test: /\.(png|jpg|gif|svg)$/, loader: "file-loader?name=images/[name].[ext]"},
+				{test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/, exclude:/.html$/, loader: "file-loader?name=fonts/[name].[ext]" },
 				{test: /\.html$/, loader: "file-loader?name=templates/[name].[ext]"}
 			]
 		},

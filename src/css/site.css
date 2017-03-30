@@ -1,0 +1,8 @@
+.autocomplete-custom .item-title {
+    display: block;
+    line-height: 1;
+}
+.autocomplete-custom .item-title md-icon {
+    width: 32px;
+    height: 32px;
+}

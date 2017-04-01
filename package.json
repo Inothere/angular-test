@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack && node_modules/.bin/webpack-dev-server",
+    "linuxDev": "node_modules/.bin/webpack-dev-server",
+    "winDev": "node_modules\\.bin\\webpack-dev-server.cmd",
     "build": "rm -rf ./dist/* && webpack"
   },
   "keywords": [],

@@ -31,6 +31,7 @@ module.exports = function(env) {
 		        $: 'jquery',
 		        jquery: 'jquery'
 		    })
-		]
+		],
+		devtool: 'source-map'
 	};
 }
